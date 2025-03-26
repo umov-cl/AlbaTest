@@ -129,7 +129,6 @@ export default function LapSelection({ laps, setLaps, onBack, onNext }) {
               backgroundColor: "#4955A8",
               borderRadius: "30px",
               border: "3px solid #585454",
-              boxShadow: "-6px 6px 4px 4px #323B79",
             }}
           >
             <img src={restar} alt="Restar vueltas" />
@@ -144,7 +143,6 @@ export default function LapSelection({ laps, setLaps, onBack, onNext }) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              boxShadow: "-12px 12px 4px 4px #4955A8",
             }}
           >
             <Typography sx={{ fontSize: "100px", color: "#4955A8" }}>
@@ -162,7 +160,6 @@ export default function LapSelection({ laps, setLaps, onBack, onNext }) {
               backgroundColor: "#4955A8",
               borderRadius: "30px",
               border: "3px solid #585454",
-              boxShadow: "-6px 6px 4px 4px #323B79",
             }}
           >
             <img src={sumar} alt="Sumar vueltas" />
@@ -182,7 +179,6 @@ export default function LapSelection({ laps, setLaps, onBack, onNext }) {
               width: "108px",
               height: "104px",
               backgroundColor: "#FF6B55",
-              boxShadow: "-8px 8px 8px #2A3D6B",
               borderRadius: "50%",
               "&:hover": { backgroundColor: "#FF5733" },
             }}
@@ -195,7 +191,6 @@ export default function LapSelection({ laps, setLaps, onBack, onNext }) {
               width: "108px",
               height: "104px",
               backgroundColor: "#FF6B55",
-              boxShadow: "8px 8px 8px #2A3D6B",
               borderRadius: "50%",
               "&:hover": { backgroundColor: "#FF5733" },
             }}

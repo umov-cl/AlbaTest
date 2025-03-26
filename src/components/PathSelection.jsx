@@ -115,7 +115,6 @@ export default function PathSelection({ onNext, onBack, setPath = () => {}  }) {
                 ? "#FF6B55"
                 : "#E1E1E1",
               borderRadius: "50px",
-              boxShadow: "-8px 8px 8px #646B9C",
               transition: "background-color 0.3s ease",
               textAlign: "center",
               padding: "10px",
@@ -162,7 +161,6 @@ export default function PathSelection({ onNext, onBack, setPath = () => {}  }) {
             width: "108px",
             height: "104px",
             backgroundColor: "#FF6B55",
-            boxShadow: "-8px 8px 8px #2A3D6B",
             borderRadius: "50%",
             "&:hover": { backgroundColor: "#FF5733" },
           }}
@@ -177,7 +175,6 @@ export default function PathSelection({ onNext, onBack, setPath = () => {}  }) {
             height: "104px",
             backgroundColor:
               selectedPaths.length > 0 ? "#FF6B55" : "#DADADA",
-            boxShadow: "8px 8px 8px #2A3D6B",
             borderRadius: "50%",
             "&:hover": {
               backgroundColor:

@@ -134,7 +134,6 @@ export default function AngleSelection({ angle, setAngle, onNext, onBack }) {
               backgroundColor:
                 selectedAngle === angleOption ? "#FF6B55" : "#FFF8F6",
               borderRadius: "50px",
-              boxShadow: "-8px 8px 0px #646B9C",
               padding: "20px",
               marginBottom: "10px",
               cursor: "pointer",
@@ -178,7 +177,6 @@ export default function AngleSelection({ angle, setAngle, onNext, onBack }) {
             width: "108px",
             height: "104px",
             backgroundColor: "#FF6B55",
-            boxShadow: "-8px 8px 8px #2A3D6B",
             borderRadius: "50%",
             "&:hover": { backgroundColor: "#FF5733" },
           }}
@@ -193,7 +191,6 @@ export default function AngleSelection({ angle, setAngle, onNext, onBack }) {
             height: "104px",
             backgroundColor:
               selectedAngle !== null ? "#FF6B55" : "#DADADA",
-            boxShadow: "8px 8px 8px #2A3D6B",
             borderRadius: "50%",
             "&:hover": {
               backgroundColor:

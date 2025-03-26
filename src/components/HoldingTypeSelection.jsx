@@ -112,7 +112,6 @@ export default function HoldingTypeSelection({
               display: "flex",
               alignItems: "center",
               cursor: "pointer",
-              boxShadow: "-12px 12px 4px 4px #4955A8",
               padding: "0 20px",
             }}
           >
@@ -139,7 +138,6 @@ export default function HoldingTypeSelection({
               display: "flex",
               alignItems: "center",
               cursor: "pointer",
-              boxShadow: "-12px 12px 4px 4px #4955A8",
               padding: "0 20px",
             }}
           >
@@ -166,7 +164,6 @@ export default function HoldingTypeSelection({
               display: "flex",
               alignItems: "center",
               cursor: "pointer",
-              boxShadow: "-12px 12px 4px 4px #4955A8",
               padding: "0 20px",
             }}
           >
@@ -197,7 +194,6 @@ export default function HoldingTypeSelection({
               width: "108px",
               height: "104px",
               backgroundColor: "#FF6B55",
-              boxShadow: "-8px 8px 8px #2A3D6B",
               borderRadius: "50%",
               "&:hover": { backgroundColor: "#FF5733" },
             }}
@@ -214,7 +210,6 @@ export default function HoldingTypeSelection({
               width: "108px",
               height: "104px",
               backgroundColor: selectedHolding ? "#FF6B55" : "#DADADA",
-              boxShadow: "8px 8px 8px #2A3D6B",
               borderRadius: "50%",
               "&:hover": {
                 backgroundColor: selectedHolding ? "#FF5733" : "#E1E1E1",

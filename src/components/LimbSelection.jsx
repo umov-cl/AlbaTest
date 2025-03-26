@@ -107,7 +107,6 @@ export default function LimbSelection({
               display: "flex",
               alignItems: "center",
               cursor: "pointer",
-              boxShadow: "-12px 12px 4px 4px #4955A8",
               padding: "0 20px",
             }}
           >
@@ -145,7 +144,6 @@ export default function LimbSelection({
               display: "flex",
               alignItems: "center",
               cursor: "pointer",
-              boxShadow: "-12px 12px 4px 4px #4955A8",
               padding: "0 20px",
             }}
           >
@@ -184,7 +182,6 @@ export default function LimbSelection({
               alignItems: "center",
               justifyContent: "space-between",
               cursor: "pointer",
-              boxShadow: "-12px 12px 4px 4px #4955A8",
               padding: "0 20px",
             }}
           >
@@ -226,7 +223,6 @@ export default function LimbSelection({
               width: "108px",
               height: "104px",
               backgroundColor: "#FF6B55",
-              boxShadow: "-8px 8px 8px #2A3D6B",
               borderRadius: "50%",
               "&:hover": { backgroundColor: "#FF5733" },
             }}
@@ -240,7 +236,6 @@ export default function LimbSelection({
               width: "108px",
               height: "104px",
               backgroundColor: selectedLimb ? "#FF6B55" : "#DADADA",
-              boxShadow: "8px 8px 8px #2A3D6B",
               borderRadius: "50%",
               "&:hover": { backgroundColor: selectedLimb ? "#FF5733" : "#E1E1E1" },
             }}
