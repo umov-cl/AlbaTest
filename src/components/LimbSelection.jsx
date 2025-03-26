@@ -8,7 +8,6 @@ import derecha from "../assets/images/derecha.svg";
 import izquierdaDerecha from "../assets/images/izquierda-derecha.svg";
 import manchas1 from "../assets/images/manchas1.png";
 
-const sounds = import.meta.glob("../assets/sounds/**/*.mp3", { eager: true });
 
 export default function LimbSelection({
   onNext,
@@ -16,12 +15,8 @@ export default function LimbSelection({
   selectedLimb,
   setSelectedLimb,
 }) {
-  const [playSelect] = useSound(
-    sounds["../assets/sounds/seleccionar.mp3"]?.default || ""
-  );
 
   const handleSelectLimb = (limb) => {
-    playSelect();
     if (selectedLimb === limb) {
       setSelectedLimb(null);
     } else {
@@ -224,7 +219,6 @@ export default function LimbSelection({
               height: "104px",
               backgroundColor: "#FF6B55",
               borderRadius: "50%",
-              "&:hover": { backgroundColor: "#FF5733" },
             }}
           >
             <ArrowBackIcon sx={{ color: "white", fontSize: "48px" }} />
@@ -237,7 +231,6 @@ export default function LimbSelection({
               height: "104px",
               backgroundColor: selectedLimb ? "#FF6B55" : "#DADADA",
               borderRadius: "50%",
-              "&:hover": { backgroundColor: selectedLimb ? "#FF5733" : "#E1E1E1" },
             }}
           >
             <ArrowForwardIcon sx={{ color: "white", fontSize: "48px" }} />

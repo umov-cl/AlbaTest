@@ -8,7 +8,6 @@ import tomada2 from "../assets/images/tomada2.svg";
 import tomada3 from "../assets/images/tomada3.svg";
 import manchas1 from "../assets/images/manchas1.png";
 
-const sounds = import.meta.glob("../assets/sounds/**/*.mp3", { eager: true });
 
 export default function HoldingTypeSelection({
   onBack,
@@ -16,15 +15,9 @@ export default function HoldingTypeSelection({
   selectedHolding,
   setSelectedHolding,
 }) {
-  const [playSelect] = useSound(
-    sounds["../assets/sounds/seleccionar.mp3"]?.default || ""
-  );
-  const [playNext] = useSound(
-    sounds["../assets/sounds/next.mp3"]?.default || ""
-  );
+ 
 
   const handleSelectHolding = (holding) => {
-    playSelect();
     if (selectedHolding === holding) {
       setSelectedHolding(null);
     } else {
@@ -195,14 +188,12 @@ export default function HoldingTypeSelection({
               height: "104px",
               backgroundColor: "#FF6B55",
               borderRadius: "50%",
-              "&:hover": { backgroundColor: "#FF5733" },
             }}
           >
             <ArrowBackIcon sx={{ color: "white", fontSize: "48px" }} />
           </IconButton>
           <IconButton
             onClick={() => {
-              playNext();
               setTimeout(onStartCountdown, 500);
             }}
             disabled={!selectedHolding}
@@ -211,9 +202,6 @@ export default function HoldingTypeSelection({
               height: "104px",
               backgroundColor: selectedHolding ? "#FF6B55" : "#DADADA",
               borderRadius: "50%",
-              "&:hover": {
-                backgroundColor: selectedHolding ? "#FF5733" : "#E1E1E1",
-              },
             }}
           >
             <ArrowForwardIcon sx={{ color: "white", fontSize: "48px" }} />

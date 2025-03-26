@@ -6,17 +6,13 @@ import useSound from "use-sound";
 import manchas1 from "../assets/images/manchas1.png";
 import pathIcon from "../assets/images/izquierda.svg"; // Imagen estática para todos
 
-const sounds = import.meta.glob("../assets/sounds/**/*.mp3", { eager: true });
-
 export default function PathSelection({ onNext, onBack, setPath = () => {}  }) {
   const [selectedPaths, setSelectedPaths] = useState([]);
-  const [playSelect] = useSound(
-    sounds["../assets/sounds/seleccionar.mp3"]?.default || ""
-  );
+  
 
   const handlePathSelect = (pathItem) => {
     console.log("Se hizo click en:", pathItem);
-    playSelect();
+ 
     setSelectedPaths((prev) =>
       prev.some((selected) => selected.id === pathItem.id)
         ? prev.filter((item) => item.id !== pathItem.id)
@@ -162,7 +158,6 @@ export default function PathSelection({ onNext, onBack, setPath = () => {}  }) {
             height: "104px",
             backgroundColor: "#FF6B55",
             borderRadius: "50%",
-            "&:hover": { backgroundColor: "#FF5733" },
           }}
         >
           <ArrowBackIcon sx={{ color: "white", fontSize: "48px" }} />
@@ -176,10 +171,6 @@ export default function PathSelection({ onNext, onBack, setPath = () => {}  }) {
             backgroundColor:
               selectedPaths.length > 0 ? "#FF6B55" : "#DADADA",
             borderRadius: "50%",
-            "&:hover": {
-              backgroundColor:
-                selectedPaths.length > 0 ? "#FF5733" : "#E1E1E1",
-            },
           }}
         >
           <ArrowForwardIcon sx={{ fontSize: "48px" }} />

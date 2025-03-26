@@ -8,17 +8,11 @@ import sumar from "../assets/images/sumar.svg";
 import vueltas from "../assets/images/vueltas2.png";
 import manchas1 from "../assets/images/manchas1.png";
 
-const sounds = import.meta.glob("../assets/sounds/**/*.mp3", { eager: true });
 
 export default function LapSelection({ laps, setLaps, onBack, onNext }) {
   const [animate, setAnimate] = useState(true);
   const [isVisible, setIsVisible] = useState(true);
-  const [playSumar] = useSound(
-    sounds["../assets/sounds/sumar.mp3"]?.default || ""
-  );
-  const [playRestar] = useSound(
-    sounds["../assets/sounds/restar.mp3"]?.default || ""
-  );
+ 
 
   useEffect(() => {
     setAnimate(true);
@@ -121,7 +115,6 @@ export default function LapSelection({ laps, setLaps, onBack, onNext }) {
           <IconButton
             onClick={() => {
               setLaps((prev) => Math.max(prev - 1, 1));
-              playRestar();
             }}
             sx={{
               width: "159px",
@@ -152,7 +145,6 @@ export default function LapSelection({ laps, setLaps, onBack, onNext }) {
           <IconButton
             onClick={() => {
               setLaps((prev) => prev + 1);
-              playSumar();
             }}
             sx={{
               width: "159px",
@@ -180,7 +172,6 @@ export default function LapSelection({ laps, setLaps, onBack, onNext }) {
               height: "104px",
               backgroundColor: "#FF6B55",
               borderRadius: "50%",
-              "&:hover": { backgroundColor: "#FF5733" },
             }}
           >
             <ArrowBackIcon sx={{ color: "white", fontSize: "48px" }} />
@@ -192,7 +183,6 @@ export default function LapSelection({ laps, setLaps, onBack, onNext }) {
               height: "104px",
               backgroundColor: "#FF6B55",
               borderRadius: "50%",
-              "&:hover": { backgroundColor: "#FF5733" },
             }}
           >
             <ArrowForwardIcon sx={{ color: "white", fontSize: "48px" }} />
