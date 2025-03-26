@@ -13,8 +13,6 @@ import inclinacion35Blanco from "../assets/images/inclinacion/35blanco.svg";
 import inclinacion50Blanco from "../assets/images/inclinacion/50blanco.svg";
 import manchas1 from "../assets/images/manchas1.png";
 
-const sounds = import.meta.glob("../assets/sounds/**/*.mp3", { eager: true });
-
 const inclinationImages = {
   0: inclinacion0,
   10: inclinacion15,
@@ -34,16 +32,12 @@ const inclinationWhiteImages = {
 export default function AngleSelection({ angle, setAngle, onNext, onBack }) {
   const scrollRef = useRef(null);
   const [selectedAngle, setSelectedAngle] = useState(null);
-  const [playSelect] = useSound(
-    sounds["../assets/sounds/seleccionar.mp3"]?.default || ""
-  );
 
   const handleTouchStart = (e) => {
     
   };
 
   const handleSelectAngle = (newAngle) => {
-    playSelect();
     if (selectedAngle === newAngle) {
       setSelectedAngle(null);
       setAngle(0);
@@ -178,7 +172,6 @@ export default function AngleSelection({ angle, setAngle, onNext, onBack }) {
             height: "104px",
             backgroundColor: "#FF6B55",
             borderRadius: "50%",
-            "&:hover": { backgroundColor: "#FF5733" },
           }}
         >
           <ArrowBackIcon sx={{ color: "white", fontSize: "48px" }} />
@@ -192,10 +185,6 @@ export default function AngleSelection({ angle, setAngle, onNext, onBack }) {
             backgroundColor:
               selectedAngle !== null ? "#FF6B55" : "#DADADA",
             borderRadius: "50%",
-            "&:hover": {
-              backgroundColor:
-                selectedAngle !== null ? "#FF5733" : "#E1E1E1",
-            },
           }}
         >
           <ArrowForwardIcon sx={{ color: "white", fontSize: "48px" }} />
